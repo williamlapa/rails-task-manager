@@ -1,0 +1,12 @@
+<%# CHAMAR O TITLE %>
+<h1><%= @task.title %></h1>
+
+<h2><%= @task.details %></h2>
+<br>
+<% if @task.completed %>
+<h2><input type="checkbox" checked/> The task is completed!</h2>
+<% else %>
+<h2><input type="checkbox"/> The task is not completed yet</h2>
+<% end %>
+<br>
+<%= link_to "Back to List", '/tasks'%>
